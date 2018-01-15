@@ -31,12 +31,54 @@ public class MainActivity extends AppCompatActivity {
     private Boolean questionOneCorrectChoice() {
         final RadioButton answerC = (RadioButton) findViewById(R.id.q1_c);
         if (answerC.isChecked()) return true;
-        else return false;
+        return false;
+    }
+
+    private Boolean questionTwoCorrectChoice() {
+        final RadioButton answerB = (RadioButton) findViewById(R.id.q2_b);
+        if (answerB.isChecked()) return true;
+        return false;
+    }
+
+    private Boolean questionThreeCorrectChoice() {
+        final RadioButton answerB = (RadioButton) findViewById(R.id.q3_b);
+        if (answerB.isChecked()) return true;
+        return false;
+    }
+
+    private Boolean questionFourCorrectChoice() {
+        final RadioButton answerA = (RadioButton) findViewById(R.id.q4_a);
+        if (answerA.isChecked()) return true;
+        return false;
+    }
+
+    private Boolean questionFiveCorrectChoice() {
+        final RadioButton answerA = (RadioButton) findViewById(R.id.q5_a);
+        if (answerA.isChecked()) return true;
+        return false;
+    }
+
+    private Boolean questionSixCorrectChoice() {
+        final RadioButton answerB = (RadioButton) findViewById(R.id.q6_b);
+        if (answerB.isChecked()) return true;
+        return false;
+    }
+    private Boolean questionSevenCorrectChoice() {
+        final RadioButton answerB = (RadioButton) findViewById(R.id.q7_b);
+        if (answerB.isChecked()) return true;
+        return false;
     }
 
     private void countCorrectGuesses() {
 
-        if (questionOneCorrectChoice() == true) correctGuesses++;
+        if (questionOneCorrectChoice()) correctGuesses++;
+        if (questionTwoCorrectChoice()) correctGuesses++;
+        if (questionThreeCorrectChoice()) correctGuesses++;
+        if (questionFourCorrectChoice()) correctGuesses++;
+        if (questionFiveCorrectChoice()) correctGuesses++;
+        if (questionSixCorrectChoice()) correctGuesses++;
+        if (questionSevenCorrectChoice()) correctGuesses++;
+
     }
 
     public void resetQuiz () {
