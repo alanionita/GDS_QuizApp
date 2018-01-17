@@ -2,6 +2,7 @@ package com.example.android.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -24,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (correctGuesses == 1) {
             text = "You have only " + correctGuesses + " correct guess!" + "\nThis must be a hard quiz!";
         }
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
         resetQuiz();
     }
 
