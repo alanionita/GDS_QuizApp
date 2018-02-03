@@ -3,274 +3,453 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/cardview_dark_background">
 
-        <TextView
-            android:id="@+id/title"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Vegan Diet Facts Quiz"
-            android:textSize="32sp" />
+            android:layout_marginTop="@dimen/cards_top_bottom_margin"
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Vegan Diet Facts Quiz"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="This is a quiz to help you better understand a vegan diet. Instead of asking you vegan friends annoying questions, use us!"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:text="This is a quiz to help you better understand a vegan diet. Instead of asking you vegan friends annoying questions, use us!"
-            android:textSize="18sp" />
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/vitamins"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="1. Which of these vitamins is likely to be lacking in a vegan diet?"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/q1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+
+                    <RadioButton
+                        android:id="@+id/q1-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin E" />
+
+                    <RadioButton
+                        android:id="@+id/q1-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin C" />
+
+                    <RadioButton
+                        android:id="@+id/q1-c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin B12" />
+
+                    <RadioButton
+                        android:id="@+id/q1-d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fiber" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="1. Which of these is likely to be lacking in a vegan diet?"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-        <RadioGroup
-            android:id="@+id/q1"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/legumes"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="2. Beans and legumes are plant-based sources of iron. Which of these contains the most iron?"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/q2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+
+                    <RadioButton
+                        android:id="@+id/q2-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kidney beans" />
+
+                    <RadioButton
+                        android:id="@+id/q2-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lentils" />
+
+                    <RadioButton
+                        android:id="@+id/q2-c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lima beans" />
+
+                    <RadioButton
+                        android:id="@+id/q2-d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fiber" />
+
+                    <RadioButton
+                        android:id="@+id/q2-e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chickpeas" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-            <RadioButton
-                android:id="@+id/q1-a"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vitamin E" />
+                android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/q1-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vitamin C" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/honey"
+                    android:scaleType="centerCrop"/>
 
-            <RadioButton
-                android:id="@+id/q1-c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vitamin B12" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="3. Honey is a plant food?"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/q1-d"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fiber" />
-        </RadioGroup>
+                <RadioGroup
+                    android:id="@+id/q3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
 
-        <TextView
+                    <RadioButton
+                        android:id="@+id/q3-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="True" />
+
+                    <RadioButton
+                        android:id="@+id/q3-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="False" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="2. Beans and legumes are plant-based sources of iron. Which of these contains the most iron?"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-        <RadioGroup
-            android:id="@+id/q2"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/soy_produce"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="4. Soy foods are a good source of calcium."
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/q4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+
+                    <RadioButton
+                        android:id="@+id/q4-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes" />
+
+                    <RadioButton
+                        android:id="@+id/q4-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Always" />
+
+                    <RadioButton
+                        android:id="@+id/q4-c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Never" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-            <RadioButton
-                android:id="@+id/q2-a"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kidney beans" />
+                android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/q2-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lentils" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/mushrooms"
+                    android:scaleType="centerCrop"/>
 
-            <RadioButton
-                android:id="@+id/q2-c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lima beans" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="5. It's difficult to obtain sufficient vitamin D from plant foods."
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/q2-d"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fiber" />
+                <RadioGroup
+                    android:id="@+id/q5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
 
-            <RadioButton
-                android:id="@+id/q2-e"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Chickpeas" />
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/q5-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="False" />
 
-        <TextView
+                    <RadioButton
+                        android:id="@+id/q5-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="True" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="3. Honey is a plant food?"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-        <RadioGroup
-            android:id="@+id/q3"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/omega3_seeds"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="6. Which of these seeds are richest in healthy omega-3 fats?"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/q6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+
+                    <RadioButton
+                        android:id="@+id/q6-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pumpkin" />
+
+                    <RadioButton
+                        android:id="@+id/q6-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flax" />
+
+                    <RadioButton
+                        android:id="@+id/q6-c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sunflower" />
+                </RadioGroup>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:layout_marginLeft="@dimen/card_side_margin"
+            android:layout_marginRight="@dimen/card_side_margin"
+            app:cardCornerRadius="@dimen/card_corner_radius">
 
-            <RadioButton
-                android:id="@+id/q3-a"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="True" />
+                android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/q3-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="False" />
-        </RadioGroup>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/veg_diet"
+                    android:scaleType="centerCrop"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="4. Soy foods are a good source of calcium."
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="7. A vegan or vegetarian diet is bound to be healthy."
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-        <RadioGroup
-            android:id="@+id/q4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+                <RadioGroup
+                    android:id="@+id/q7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
 
-            <RadioButton
-                android:id="@+id/q4-a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sometimes" />
+                    <RadioButton
+                        android:id="@+id/q7-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="True" />
 
-            <RadioButton
-                android:id="@+id/q4-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Always" />
+                    <RadioButton
+                        android:id="@+id/q7-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="False" />
+                </RadioGroup>
 
-            <RadioButton
-                android:id="@+id/q4-c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Never" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="5. It's difficult to obtain sufficient vitamin D from plant foods."
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/q5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/q5-a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="False" />
-
-            <RadioButton
-                android:id="@+id/q5-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="True" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="6. Which of these seeds are richest in healthy omega-3 fats?"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/q6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/q6-a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pumpkin" />
-
-            <RadioButton
-                android:id="@+id/q6-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Flax" />
-
-            <RadioButton
-                android:id="@+id/q6-c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sunflower" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="7. A vegan or vegetarian diet is bound to be healthy."
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/q7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/q7-a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="True" />
-
-            <RadioButton
-                android:id="@+id/q7-b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="False" />
-        </RadioGroup>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
         <Button
@@ -280,7 +459,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:text="Submit"
-            android:onClick="submitAnswers"/>
+            android:onClick="submitAnswers"
+            android:gravity="center_vertical"/>
 
     </LinearLayout>
 </ScrollView>
