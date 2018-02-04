@@ -15,7 +15,7 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/cards_top_bottom_margin"
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
@@ -26,22 +26,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logo_size"
+                    android:layout_marginTop="@dimen/cards_top_bottom_margin"
+                    android:src="@drawable/vegan_soc_logo"
+                    android:layout_gravity="center"/>
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/questions_text_margin"
+                    android:layout_marginTop="@dimen/questions_text_margin"
                     android:text="@string/app_name"
-                    android:textSize="@dimen/title_text_size" />
+                    android:textSize="@dimen/title_text_size"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:textSize="@dimen/subtitle_text_size"
+                    android:text="@string/subtitle"
+                    android:textAlignment="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/questions_text_margin"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginLeft="@dimen/cards_top_bottom_margin"
+                    android:layout_marginRight="@dimen/cards_top_bottom_margin"
                     android:text="@string/intro_text"
-                    android:textSize="@dimen/questions_text_size" />
+                    android:textSize="@dimen/questions_text_size"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:textSize="@dimen/subtitle_text_size"
+                    android:text="@string/cta"
+                    android:textAlignment="center"/>
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/ic_arrow_downward_black_24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin"/>
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Vegan Diet Facts Quiz</string>
-    <string name="intro_text">This is a quiz to help you better understand a vegan diet. Instead of asking you vegan friends annoying questions, use us!</string>
+    <string name="intro_text">Thinking about going vegan? Want to spot annoying your vegan friends with silly questions? This is a quiz to help you better understand a vegan diet powered by the Vegan Society.</string>
     <string name="question_1_text">1. Which of these vitamins is likely to be lacking in a vegan diet?</string>
     <string name="question_1_option_a">Vitamin E</string>
     <string name="question_1_option_b">Vitamin C</string>
@@ -30,4 +30,6 @@
     <string name="question_7_option_a">True</string>
     <string name="question_7_option_b">False</string>
     <string name="button_text">Submit</string>
+    <string name="subtitle">Test your vegan IQ</string>
+    <string name="cta">Start quiz</string>
 </resources>
