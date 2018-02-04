@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">QuizApp</string>
+    <string name="app_name">Vegan Diet Facts Quiz</string>
+    <string name="intro_text">This is a quiz to help you better understand a vegan diet. Instead of asking you vegan friends annoying questions, use us!</string>
+    <string name="question_1_text">1. Which of these vitamins is likely to be lacking in a vegan diet?</string>
+    <string name="question_1_option_a">Vitamin E</string>
+    <string name="question_1_option_b">Vitamin C</string>
+    <string name="question_1_option_c">Vitamin B12</string>
+    <string name="question_1_option_d">Fiber</string>
+    <string name="question_2_text">2. Beans and legumes are plant-based sources of iron. Which of these contains the most iron?</string>
+    <string name="question_2_option_a">Kidney beans</string>
+    <string name="question_2_option_b">Lentils</string>
+    <string name="question_2_option_c">Lima beans</string>
+    <string name="question_2_option_d">Fiber</string>
+    <string name="question_2_option_e">Chickpeas</string>
+    <string name="question_3_text">3. Honey is a plant food?</string>
+    <string name="question_3_option_a">True</string>
+    <string name="question_3_option_b">False</string>
+    <string name="question_4_text">4. Soy foods are a good source of calcium.</string>
+    <string name="question_4_option_a">Sometimes</string>
+    <string name="question_4_option_b">Always</string>
+    <string name="question_4_option_c">Never</string>
+    <string name="question_5_text">5. It\'s difficult to obtain sufficient vitamin D from plant foods.</string>
+    <string name="question_5_option_a">True</string>
+    <string name="question_5_option_b">False</string>
+    <string name="question_6_text">6. Which of these seeds are richest in healthy omega-3 fats?</string>
+    <string name="question_6_option_a">Pumpkin</string>
+    <string name="question_6_option_b">Flax</string>
+    <string name="question_6_option_c">Sunflower</string>
+    <string name="question_7_text">7. A vegan or vegetarian diet is bound to be healthy.</string>
+    <string name="question_7_option_a">True</string>
+    <string name="question_7_option_b">False</string>
+    <string name="button_text">Submit</string>
 </resources>
