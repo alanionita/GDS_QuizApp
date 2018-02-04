@@ -32,4 +32,6 @@
     <string name="button_text">Submit</string>
     <string name="subtitle">Test your vegan IQ</string>
     <string name="cta">Start quiz</string>
+    <string name="modal_main_text">Well done!</string>
+    <string name="modal_sub_text">You scored: </string>
 </resources>

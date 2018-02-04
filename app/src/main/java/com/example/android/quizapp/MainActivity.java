@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int correctGuesses = 0;
+    private int correctGuesses = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +18,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitAnswers(View view) {
+        ResultsModal modal = new ResultsModal();
+        modal.show(getFragmentManager(), "dialog");
         countCorrectGuesses();
-        CharSequence text = "You have " + correctGuesses + " correct guesses!" + "\nWell done!";
-        if (correctGuesses == 0) {
-            text = "Wow! You're not very good at this are you?!!!";
-        } else if (correctGuesses == 1) {
-            text = "You have only " + correctGuesses + " correct guess!" + "\nThis must be a hard quiz!";
-        }
-        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
         resetQuiz();
+//        CharSequence text = "You have " + correctGuesses + " correct guesses!" + "\nWell done!";
+//        if (correctGuesses == 0) {
+//            text = "Wow! You're not very good at this are you?!!!";
+//        } else if (correctGuesses == 1) {
+//            text = "You have only " + correctGuesses + " correct guess!" + "\nThis must be a hard quiz!";
+//        }
+//        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
+//        toast.setGravity(Gravity.CENTER, 0, 0);
+//        toast.show();
     }
 
     private Boolean questionOneCorrectChoice() {
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    private void countCorrectGuesses() {
+    public int  countCorrectGuesses() {
 
         if (questionOneCorrectChoice()) correctGuesses++;
         if (questionTwoCorrectChoice()) correctGuesses++;
@@ -82,12 +84,12 @@ public class MainActivity extends AppCompatActivity {
         if (questionSixCorrectChoice()) correctGuesses++;
         if (questionSevenCorrectChoice()) correctGuesses++;
 
+        return correctGuesses;
     }
 
     public void resetQuiz () {
         correctGuesses = 0;
     }
-
 
 
 }
