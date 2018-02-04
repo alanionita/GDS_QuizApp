@@ -18,16 +18,18 @@ import android.widget.TextView;
  */
 
 public class ResultsModal extends DialogFragment {
-    public Button button;
+    public Button answersButton;
+    public Button backToQuiz;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View resultsView = inflater.inflate(R.layout.results_modal, container, false);
-        button = resultsView.findViewById(R.id.answers_button);
+        answersButton = resultsView.findViewById(R.id.answers_button);
+        backToQuiz = resultsView.findViewById(R.id.back_to_quiz_button);
         getDialog().setTitle("Results of the quiz!");
 
-        button.setOnClickListener(new View.OnClickListener()
+        answersButton.setOnClickListener(new View.OnClickListener()
         {   public void onClick(View v)
         {
             Intent i = new Intent(ResultsModal.this.getActivity(), Answers.class);
@@ -35,6 +37,13 @@ public class ResultsModal extends DialogFragment {
         }
         });
 
+        backToQuiz.setOnClickListener(new View.OnClickListener()
+        {   public void onClick(View v)
+        {
+            Intent i = new Intent(ResultsModal.this.getActivity(), MainActivity.class);
+            startActivity(i);
+        }
+        });
 
         TextView correctAnswers = resultsView.findViewById(R.id.guess);
         int correctGuesses = ((MainActivity)getActivity()).countCorrectGuesses();

@@ -8,7 +8,7 @@
     android:id="@+id/results_modal">
 
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         card_view:cardElevation="10dp"
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_margin="24dp">
+            android:layout_margin="40dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,7 +37,8 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="horizontal"
-               android:gravity="center">
+               android:gravity="center"
+               android:layout_margin="20dp">
 
                <TextView
                    android:id="@+id/guess"
@@ -57,13 +58,20 @@
                    android:textSize="24sp"/>
            </LinearLayout>
 
-            <Button
-                android:id="@+id/answers_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="See answers"
-                android:onClick="onAnswersButtonClick"/>
+           <Button
+               android:id="@+id/answers_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="See answers"
+               android:onClick="onAnswersButtonClick"
+               android:layout_margin="10dp"/>
 
+           <Button
+               android:id="@+id/back_to_quiz_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Back to quiz"
+               android:layout_margin="10dp"/>
 
 
         </LinearLayout>
