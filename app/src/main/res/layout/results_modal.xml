@@ -58,9 +58,11 @@
            </LinearLayout>
 
             <Button
+                android:id="@+id/answers_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See answers"/>
+                android:text="See answers"
+                android:onClick="onAnswersButtonClick"/>
 
 
 

@@ -34,4 +34,11 @@
     <string name="cta">Start quiz</string>
     <string name="modal_main_text">Well done!</string>
     <string name="modal_sub_text">You scored: </string>
+    <string name="q1_answer">c) Vitamin B12 is likely to fall short in diets made up solely of plant foods, as its main food sources are meat and fish. Some foods, including some nutritional yeasts and meat substitutes, may contain added B12, which would be listed on their labels. However, supplements of B12 are often recommended as a reliable source of the vitamin.</string>
+    <string name="q2_answer">b) Cooked, per cup, lentils contain 6.6 mg, compared to 5.2 mg in kidney beans, 4.7 mg in chickpeas, and 4.5 mg in lima beans.</string>
+    <string name="q3_answer">b) Although the basic material for honey, nectar, comes from flowers, it doesn\'t naturally turn into honey. After bees collect nectar, enzymes and proteins in their stomachs convert it into honey, so honey is an animal product.</string>
+    <string name="q4_answer">a) Soy foods are a good source of calcium only when they are enriched with the mineral. Checking the label of a specific product is the only way to tell whether or not it contains added calcium.</string>
+    <string name="q5_answer">a) Fish is the main food source of vitamin D, and cow\'s milk enriched with the vitamin is another. Vegetarians who eat dairy products can get vitamin D from milk and yogurt. Egg yolks, for those who eat them, are another source. For anyone following a purely plant-based diet, some plant foods have added vitamin D (check labels), and vegan vitamin D supplements are available.</string>
+    <string name="q6_answer">b) Flax seeds, which need to be ground, are the richest plant sources of omega-3 fats. Chia seeds are a close second.</string>
+    <string name="q7_answer">b) A diet that omits animal foods but is high in refined carbohydrates and sugar is not healthy. A wholesome vegan diet is rich in a variety of vegetables and fruits and contains legumes, plant sources of fats (such as nuts, seeds, and avocados), and a variety of whole grains. Some vegetarians might also eat dairy products and eggs.</string>
 </resources>

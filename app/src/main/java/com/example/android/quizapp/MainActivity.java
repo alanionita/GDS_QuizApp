@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -34,44 +35,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Boolean questionOneCorrectChoice() {
-        final RadioButton answerC = (RadioButton) findViewById(R.id.q1_c);
-        if (answerC.isChecked()) return true;
-        return false;
+        final RadioButton answerC = findViewById(R.id.q1_c);
+        return answerC.isChecked();
     }
 
     private Boolean questionTwoCorrectChoice() {
-        final RadioButton answerB = (RadioButton) findViewById(R.id.q2_b);
-        if (answerB.isChecked()) return true;
-        return false;
+        final RadioButton answerB = findViewById(R.id.q2_b);
+        return answerB.isChecked();
     }
 
     private Boolean questionThreeCorrectChoice() {
-        final RadioButton answerB = (RadioButton) findViewById(R.id.q3_b);
-        if (answerB.isChecked()) return true;
-        return false;
+        final RadioButton answerB = findViewById(R.id.q3_b);
+        return answerB.isChecked();
     }
 
     private Boolean questionFourCorrectChoice() {
-        final RadioButton answerA = (RadioButton) findViewById(R.id.q4_a);
-        if (answerA.isChecked()) return true;
-        return false;
+        final RadioButton answerA = findViewById(R.id.q4_a);
+        return answerA.isChecked();
     }
 
     private Boolean questionFiveCorrectChoice() {
-        final RadioButton answerA = (RadioButton) findViewById(R.id.q5_a);
-        if (answerA.isChecked()) return true;
-        return false;
+        final RadioButton answerA = findViewById(R.id.q5_a);
+        return answerA.isChecked();
     }
 
     private Boolean questionSixCorrectChoice() {
-        final RadioButton answerB = (RadioButton) findViewById(R.id.q6_b);
-        if (answerB.isChecked()) return true;
-        return false;
+        final RadioButton answerB = findViewById(R.id.q6_b);
+        return answerB.isChecked();
     }
     private Boolean questionSevenCorrectChoice() {
-        final RadioButton answerB = (RadioButton) findViewById(R.id.q7_b);
-        if (answerB.isChecked()) return true;
-        return false;
+        final RadioButton answerB = findViewById(R.id.q7_b);
+        return answerB.isChecked();
     }
 
     public int  countCorrectGuesses() {
@@ -91,5 +85,10 @@ public class MainActivity extends AppCompatActivity {
         correctGuesses = 0;
     }
 
-
+    public void onAnswersButtonClick (View answers) {
+        if (answers.getId() == R.id.answers) {
+            Intent i = new Intent(MainActivity.this, Answers.class);
+            startActivity(i);
+        }
+    }
 }

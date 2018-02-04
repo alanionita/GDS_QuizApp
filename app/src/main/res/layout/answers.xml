@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/answers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:src="@drawable/vitamins"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_1_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q1_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_2_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q2_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_3_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q3_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_4_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q4_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_5_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q5_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_6_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q6_answer"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_7_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q7_answer"/>
+
+            </LinearLayout>
+</ScrollView>
