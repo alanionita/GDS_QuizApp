@@ -31,7 +31,6 @@
     <string name="question_7_option_b">False</string>
     <string name="button_text">Submit</string>
     <string name="subtitle">Test your vegan IQ</string>
-    <string name="cta">Start quiz</string>
     <string name="modal_main_text">Well done, %1$s!</string>
     <string name="modal_sub_text">You scored: </string>
     <string name="q1_answer">c) Vitamin B12 is likely to fall short in diets made up solely of plant foods, as its main food sources are meat and fish. Some foods, including some nutritional yeasts and meat substitutes, may contain added B12, which would be listed on their labels. However, supplements of B12 are often recommended as a reliable source of the vitamin.</string>
@@ -41,4 +40,23 @@
     <string name="q5_answer">a) Fish is the main food source of vitamin D, and cow\'s milk enriched with the vitamin is another. Vegetarians who eat dairy products can get vitamin D from milk and yogurt. Egg yolks, for those who eat them, are another source. For anyone following a purely plant-based diet, some plant foods have added vitamin D (check labels), and vegan vitamin D supplements are available.</string>
     <string name="q6_answer">b) Flax seeds, which need to be ground, are the richest plant sources of omega-3 fats. Chia seeds are a close second.</string>
     <string name="q7_answer">b) A diet that omits animal foods but is high in refined carbohydrates and sugar is not healthy. A wholesome vegan diet is rich in a variety of vegetables and fruits and contains legumes, plant sources of fats (such as nuts, seeds, and avocados), and a variety of whole grains. Some vegetarians might also eat dairy products and eggs.</string>
+    <string name="enter_name_hint">Start by entering your first name</string>
+    <string name="modal_guesses">0</string>
+    <string name="modal_out_of">out of 7</string>
+    <string name="modal_see_ans_button_text">See answers</string>
+    <string name="modal_back_to_quiz">Back to quiz</string>
+
+    // content descriptions
+    <string name="content_desc_arrow_dow">Arrow pointing downwards</string>
+    <string name="content_vegan_soc_logo">Vegan Society Logo</string>
+    <string name="content_desc_vitamins">A bunch of spread vitamin pills</string>
+    <string name="content_desc_legumes">Showcases different types of legumes</string>
+    <string name="content_desc_honey">A jar of honey</string>
+    <string name="content_desc_soy_produce">A variety of soy products</string>
+    <string name="content_desc_mushrooms">A closeup mushroom</string>
+    <string name="content_desc_omega_seeds">A grouping of seeds that are rich in omega3</string>
+    <string name="content_desc_veg_diet">Mixture of vegetables</string>
+    <string name="content_desc_veg_questions">Vegetables surrounding a question mark</string>
+    <string name="content_desc_tomato">picture of a tomato</string>
+
 </resources>

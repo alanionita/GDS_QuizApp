@@ -14,8 +14,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
-                    android:src="@drawable/vitamins"
-                    android:scaleType="centerCrop"/>
+                    android:src="@drawable/vegan_answers"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_veg_questions"/>
 
                 <TextView
                     android:layout_width="match_parent"

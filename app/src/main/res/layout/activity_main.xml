@@ -35,7 +35,8 @@
                     android:layout_height="@dimen/logo_size"
                     android:layout_marginTop="@dimen/cards_top_bottom_margin"
                     android:src="@drawable/vegan_soc_logo"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/content_vegan_soc_logo"/>
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
@@ -67,7 +68,7 @@
                     android:id="@+id/enter_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Start by entering your first name"
+                    android:hint="@string/enter_name_hint"
                     android:layout_gravity="center"/>
 
                 <ImageView
@@ -75,7 +76,8 @@
                     android:layout_height="@dimen/icon_size"
                     android:src="@drawable/ic_arrow_downward_pointer"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin" />
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+                    android:contentDescription="@string/content_desc_arrow_dow"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -98,7 +100,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/vitamins"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_vitamins"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -163,7 +166,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/legumes"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_legumes"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -234,7 +238,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/honey"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_honey"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -287,7 +292,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/soy_produce"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_soy_produce"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -347,7 +353,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/mushrooms"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_mushrooms"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -400,7 +407,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/omega3_seeds"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_omega_seeds"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -458,7 +466,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:src="@drawable/veg_diet"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_veg_diet"/>
 
                 <TextView
                     android:layout_width="match_parent"
