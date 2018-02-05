@@ -487,13 +487,14 @@
 
         <Button
             android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/questions_text_margin"
-            android:layout_marginTop="@dimen/questions_text_margin"
+            android:textSize="@dimen/subtitle_text_size"
+            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
+            android:textAllCaps="false"
             android:text="@string/button_text"
             android:onClick="submitAnswers"
-            android:gravity="center_vertical"/>
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 </ScrollView>

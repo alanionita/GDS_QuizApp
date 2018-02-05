@@ -25,12 +25,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modal_main_text"
+                android:textStyle="bold"
+                android:textSize="@dimen/subtitle_text_size"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modal_sub_text"
+                android:textSize="@dimen/questions_text_size"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"/>
 
            <LinearLayout
@@ -38,14 +42,15 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                android:gravity="center"
-               android:layout_margin="20dp">
+               android:layout_marginTop="8dp"
+               android:layout_marginBottom="20dp">
 
                <TextView
                    android:id="@+id/guess"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="0"
-                   android:textSize="24sp"/>
+                   android:textSize="@dimen/subtitle_text_size"/>
                <ImageView
                    android:layout_width="50dp"
                    android:layout_height="50dp"
@@ -55,24 +60,29 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="out of 7"
-                   android:textSize="24sp"/>
+                   android:textSize="@dimen/subtitle_text_size"/>
            </LinearLayout>
 
            <Button
                android:id="@+id/answers_button"
-               android:layout_width="wrap_content"
+               android:layout_width="150dp"
                android:layout_height="wrap_content"
+               android:textSize="@dimen/questions_text_size"
+               android:textAllCaps="false"
+               android:textStyle="normal"
                android:text="See answers"
                android:onClick="onAnswersButtonClick"
-               android:layout_margin="10dp"/>
+               android:layout_marginBottom="8dp"/>
 
            <Button
                android:id="@+id/back_to_quiz_button"
-               android:layout_width="wrap_content"
+               android:layout_width="150dp"
                android:layout_height="wrap_content"
+               android:textSize="@dimen/questions_text_size"
+               android:textAllCaps="false"
+               android:textStyle="normal"
                android:text="Back to quiz"
-               android:layout_margin="10dp"/>
-
+               android:layout_marginTop="8dp"/>
 
         </LinearLayout>
 
