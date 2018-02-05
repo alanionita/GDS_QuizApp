@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         card_view:cardElevation="10dp"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:background="@color/primary_light">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,6 +23,7 @@
             android:layout_margin="40dp">
 
             <TextView
+                android:id="@+id/intro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modal_main_text"
@@ -72,17 +74,21 @@
                android:textStyle="normal"
                android:text="See answers"
                android:onClick="onAnswersButtonClick"
-               android:layout_marginBottom="8dp"/>
+               android:layout_marginBottom="8dp"
+               android:background="@color/colorAccent"
+               android:textColor="@color/icons"/>
 
            <Button
                android:id="@+id/back_to_quiz_button"
                android:layout_width="150dp"
                android:layout_height="wrap_content"
+               android:background="@color/colorAccent"
                android:textSize="@dimen/questions_text_size"
                android:textAllCaps="false"
                android:textStyle="normal"
                android:text="Back to quiz"
-               android:layout_marginTop="8dp"/>
+               android:layout_marginTop="8dp"
+               android:textColor="@color/icons"/>
 
         </LinearLayout>
 

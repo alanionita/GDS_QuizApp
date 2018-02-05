@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +7,14 @@
     tools:context=".MainActivity"
     android:fillViewport="true">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/cardview_dark_background">
+        android:background="@color/primary_light">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -20,7 +23,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,21 +63,19 @@
                     android:textSize="@dimen/questions_text_size"
                     android:textAlignment="center"/>
 
-                <TextView
-                    android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/enter_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/questions_text_margin"
-                    android:textSize="@dimen/subtitle_text_size"
-                    android:text="@string/cta"
-                    android:textAlignment="center"/>
+                    android:hint="Start by entering your first name"
+                    android:layout_gravity="center"/>
 
                 <ImageView
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
-                    android:src="@drawable/ic_arrow_downward_black_24dp"
+                    android:src="@drawable/ic_arrow_downward_pointer"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin"/>
-
+                    android:layout_marginBottom="@dimen/cards_top_bottom_margin" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -84,7 +86,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -148,7 +151,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -218,7 +222,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -270,7 +275,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -329,7 +335,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -381,7 +388,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -438,7 +446,8 @@
             android:layout_marginBottom="@dimen/cards_top_bottom_margin"
             android:layout_marginLeft="@dimen/card_side_margin"
             android:layout_marginRight="@dimen/card_side_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -494,7 +503,10 @@
             android:textAllCaps="false"
             android:text="@string/button_text"
             android:onClick="submitAnswers"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            android:textColor="@color/icons"/>
 
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
