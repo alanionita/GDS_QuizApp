@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,15 +22,6 @@ public class MainActivity extends AppCompatActivity {
         modal.show(getFragmentManager(), "dialog");
         countCorrectGuesses();
         resetQuiz();
-//        CharSequence text = "You have " + correctGuesses + " correct guesses!" + "\nWell done!";
-//        if (correctGuesses == 0) {
-//            text = "Wow! You're not very good at this are you?!!!";
-//        } else if (correctGuesses == 1) {
-//            text = "You have only " + correctGuesses + " correct guess!" + "\nThis must be a hard quiz!";
-//        }
-//        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
-//        toast.setGravity(Gravity.CENTER, 0, 0);
-//        toast.show();
     }
 
     private Boolean questionOneCorrectChoice() {
@@ -66,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
         return answerB.isChecked();
     }
 
+    private Boolean questionEightCorrectChoices() {
+        final CheckBox answerG = findViewById(R.id.q8_g);
+        return answerG.isChecked();
+    }
+
     public int  countCorrectGuesses() {
 
         if (questionOneCorrectChoice()) correctGuesses++;
@@ -75,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         if (questionFiveCorrectChoice()) correctGuesses++;
         if (questionSixCorrectChoice()) correctGuesses++;
         if (questionSevenCorrectChoice()) correctGuesses++;
+        if (!questionEightCorrectChoices()) correctGuesses++;
 
         return correctGuesses;
     }

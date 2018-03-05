@@ -16,4 +16,5 @@
     <dimen name="modal_icons">50dp</dimen>
     <dimen name="modal_elevation">10dp</dimen>
     <dimen name="modal_button_width">150dp</dimen>
+    <dimen name="button_width">150dp</dimen>
 </resources>

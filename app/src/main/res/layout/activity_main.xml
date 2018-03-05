@@ -17,14 +17,9 @@
         android:background="@color/primary_light">
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/cards_top_bottom_margin"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -83,13 +78,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,12 +104,7 @@
 
                 <RadioGroup
                     android:id="@+id/q1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q1-a"
@@ -149,13 +135,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -179,12 +161,7 @@
 
                 <RadioGroup
                     android:id="@+id/q2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q2-a"
@@ -221,13 +198,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -251,12 +224,7 @@
 
                 <RadioGroup
                     android:id="@+id/q3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q3-a"
@@ -275,13 +243,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -305,12 +269,7 @@
 
                 <RadioGroup
                     android:id="@+id/q4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q4-a"
@@ -336,13 +295,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -366,12 +321,7 @@
 
                 <RadioGroup
                     android:id="@+id/q5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q5-a"
@@ -390,13 +340,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -420,12 +366,7 @@
 
                 <RadioGroup
                     android:id="@+id/q6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q6-a"
@@ -449,13 +390,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:layout_marginLeft="@dimen/card_side_margin"
-            android:layout_marginRight="@dimen/card_side_margin"
             app:cardCornerRadius="@dimen/card_corner_radius"
-            app:cardBackgroundColor="@color/icons">
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -479,12 +416,7 @@
 
                 <RadioGroup
                     android:id="@+id/q7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/questions_text_margin"
-                    android:layout_marginRight="@dimen/questions_text_margin"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="@dimen/cards_top_bottom_margin">
+                    style="@style/RadioGroupStyle">
 
                     <RadioButton
                         android:id="@+id/q7-a"
@@ -502,19 +434,86 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardBackgroundColor="@color/icons"
+            style="@style/CardStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:src="@drawable/kale"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/content_desc_veg_diet"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_8_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/q8"
+                    style="@style/RadioGroupStyle">
+
+                    <CheckBox
+                        android:id="@+id/q8-a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_a" />
+
+                    <CheckBox
+                        android:id="@+id/q8-b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_b" />
+
+                    <CheckBox
+                        android:id="@+id/q8-c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_c" />
+
+                    <CheckBox
+                        android:id="@+id/q8-d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_d" />
+
+                    <CheckBox
+                        android:id="@+id/q8-e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_e" />
+
+                    <CheckBox
+                        android:id="@+id/q8-f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_f" />
+
+                    <CheckBox
+                        android:id="@+id/q8-g"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_8_option_g" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <Button
             android:id="@+id/submit_button"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/subtitle_text_size"
-            android:layout_marginBottom="@dimen/cards_top_bottom_margin"
-            android:textAllCaps="false"
             android:text="@string/button_text"
             android:onClick="submitAnswers"
-            android:layout_gravity="center"
-            android:background="@color/colorAccent"
-            android:textColor="@color/icons"/>
+            style="@style/ButtonStyle"/>
 
     </LinearLayout>
     </ScrollView>

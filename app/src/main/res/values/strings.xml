@@ -29,6 +29,14 @@
     <string name="question_7_text">7. A vegan or vegetarian diet is bound to be healthy.</string>
     <string name="question_7_option_a">True</string>
     <string name="question_7_option_b">False</string>
+    <string name="question_8_text">8. Which of these vegan sources are rich in calcium?</string>
+    <string name="question_8_option_a">Kale</string>
+    <string name="question_8_option_b">Pak Choi</string>
+    <string name="question_8_option_c">Okra</string>
+    <string name="question_8_option_d">Spring Greens</string>
+    <string name="question_8_option_e">Dried Figs</string>
+    <string name="question_8_option_f">Chia Seeds</string>
+    <string name="question_8_option_g">Red Peppers</string>
     <string name="button_text">Submit</string>
     <string name="subtitle">Test your vegan IQ</string>
     <string name="modal_main_text">Well done, %1$s!</string>
@@ -40,6 +48,7 @@
     <string name="q5_answer">a) Fish is the main food source of vitamin D, and cow\'s milk enriched with the vitamin is another. Vegetarians who eat dairy products can get vitamin D from milk and yogurt. Egg yolks, for those who eat them, are another source. For anyone following a purely plant-based diet, some plant foods have added vitamin D (check labels), and vegan vitamin D supplements are available.</string>
     <string name="q6_answer">b) Flax seeds, which need to be ground, are the richest plant sources of omega-3 fats. Chia seeds are a close second.</string>
     <string name="q7_answer">b) A diet that omits animal foods but is high in refined carbohydrates and sugar is not healthy. A wholesome vegan diet is rich in a variety of vegetables and fruits and contains legumes, plant sources of fats (such as nuts, seeds, and avocados), and a variety of whole grains. Some vegetarians might also eat dairy products and eggs.</string>
+    <string name="q8_answer">All excluding g) Good sources of calcium include kale, pak choi, okra, spring greens, dried figs, chia seeds and almonds. Red peppers are a great source of vitamin C, but contain very little calcium.</string>
     <string name="enter_name_hint">Start by entering your first name</string>
     <string name="modal_guesses">0</string>
     <string name="modal_out_of">out of 7</string>

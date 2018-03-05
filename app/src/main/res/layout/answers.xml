@@ -137,5 +137,22 @@
                     android:textStyle="normal"
                     android:text="@string/q7_answer"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/questions_text_margin"
+                    android:text="@string/question_8_text"
+                    android:textSize="@dimen/questions_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/questions_text_margin"
+                    android:layout_marginRight="@dimen/questions_text_margin"
+                    android:layout_marginBottom="@dimen/questions_text_margin"
+                    android:textStyle="normal"
+                    android:text="@string/q8_answer"/>
+
             </LinearLayout>
 </ScrollView>
