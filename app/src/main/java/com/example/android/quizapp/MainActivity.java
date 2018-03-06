@@ -1,11 +1,19 @@
 package com.example.android.quizapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +23,40 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Targets the editTextView
+        EditText targetEditText = (EditText)findViewById(R.id.enter_name);
+
+        // Sets an onClick Listener to the EditText
+        targetEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                switch (actionId) {
+                    case EditorInfo.IME_ACTION_DONE:
+                        // Hide keyboard
+                        hideSoftKeyboard(MainActivity.this);
+
+                        // Clear view focus
+                        v.clearFocus();
+
+                        // Request focus from the parent view
+                        CardView leadingCard = (CardView)findViewById(R.id.leading_card);
+                        leadingCard.requestFocus();
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
+    }
+
+    // Method for hiding the soft keyboard, mostly used on the leading EditText
+    public static void hideSoftKeyboard(Activity activity) {
+        if (activity == null) return;
+        if (activity.getCurrentFocus() == null) return;
+
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
     public void submitAnswers(View view) {
@@ -64,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int  countCorrectGuesses() {
-
         if (questionOneCorrectChoice()) correctGuesses++;
         if (questionTwoCorrectChoice()) correctGuesses++;
         if (questionThreeCorrectChoice()) correctGuesses++;
