@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             toastMessageFormat = getResources().getString(R.string.toast_message_plural);
         } else if (correctGuesses == 1) {
             toastMessageFormat = getResources().getString(R.string.toast_message_singular);
-        } else if (correctGuesses == 0) {
+        } else {
             toastMessageFormat = getResources().getString(R.string.toast_message_none);
         }
 
@@ -91,49 +91,57 @@ public class MainActivity extends AppCompatActivity {
         modal.show(getFragmentManager(), "dialog");
         toast.show();
 
-
         // reset the score via resetQuiz()
-
         resetQuiz();
     }
 
     private Boolean questionOneCorrectChoice() {
-        final RadioButton answerC = findViewById(R.id.q1_c);
-        return answerC.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q1_c);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionTwoCorrectChoice() {
-        final RadioButton answerB = findViewById(R.id.q2_b);
-        return answerB.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q2_b);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionThreeCorrectChoice() {
-        final RadioButton answerB = findViewById(R.id.q3_b);
-        return answerB.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q3_b);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionFourCorrectChoice() {
-        final RadioButton answerA = findViewById(R.id.q4_a);
-        return answerA.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q4_a);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionFiveCorrectChoice() {
-        final RadioButton answerA = findViewById(R.id.q5_a);
-        return answerA.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q5_a);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionSixCorrectChoice() {
-        final RadioButton answerB = findViewById(R.id.q6_b);
-        return answerB.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q6_b);
+        return correctAnswer.isChecked();
     }
     private Boolean questionSevenCorrectChoice() {
-        final RadioButton answerB = findViewById(R.id.q7_b);
-        return answerB.isChecked();
+        final RadioButton correctAnswer = findViewById(R.id.q7_b);
+        return correctAnswer.isChecked();
     }
 
     private Boolean questionEightCorrectChoices() {
+        Boolean result = false;
+        final CheckBox answerA = findViewById(R.id.q8_a);
+        final CheckBox answerB = findViewById(R.id.q8_b);
+        final CheckBox answerC = findViewById(R.id.q8_c);
+        final CheckBox answerD = findViewById(R.id.q8_d);
+        final CheckBox answerE = findViewById(R.id.q8_e);
+        final CheckBox answerF = findViewById(R.id.q8_f);
         final CheckBox answerG = findViewById(R.id.q8_g);
-        return answerG.isChecked();
+        if (answerA.isChecked() && answerB.isChecked() && answerC.isChecked() && answerD.isChecked() && answerE.isChecked() && answerF.isChecked()) {
+            result = true;
+        }
+        return result;
     }
 
     public int  countCorrectGuesses() {
@@ -144,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         if (questionFiveCorrectChoice()) correctGuesses++;
         if (questionSixCorrectChoice()) correctGuesses++;
         if (questionSevenCorrectChoice()) correctGuesses++;
-        if (!questionEightCorrectChoices()) correctGuesses++;
+        if (questionEightCorrectChoices()) correctGuesses++;
 
         return correctGuesses;
     }
