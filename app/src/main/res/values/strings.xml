@@ -54,6 +54,9 @@
     <string name="modal_out_of">out of 7</string>
     <string name="modal_see_ans_button_text">See answers</string>
     <string name="modal_back_to_quiz">Back to quiz</string>
+    <string name="toast_message_none">You didn\'t get any correct answers!</string>
+    <string name="toast_message_singular">You got %1$d correct answer!</string>
+    <string name="toast_message_plural">You got %1$d correct answers!</string>
 
     // content descriptions
     <string name="content_desc_arrow_dow">Arrow pointing downwards</string>

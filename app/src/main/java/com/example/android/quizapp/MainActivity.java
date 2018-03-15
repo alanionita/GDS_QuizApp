@@ -14,10 +14,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int correctGuesses = 0;
+    // Stores the amount of correct guesses made by a user
+    private int correctGuesses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +62,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitAnswers(View view) {
-        ResultsModal modal = new ResultsModal();
-        modal.show(getFragmentManager(), "dialog");
+        // Count the results
         countCorrectGuesses();
+
+        // Define toast params
+        Context context = getApplicationContext();
+        String toastMessageFormat = "";
+
+        // Change message depending on the quiz results
+        if (correctGuesses > 1) {
+            toastMessageFormat = getResources().getString(R.string.toast_message_plural);
+        } else if (correctGuesses == 1) {
+            toastMessageFormat = getResources().getString(R.string.toast_message_singular);
+        } else if (correctGuesses == 0) {
+            toastMessageFormat = getResources().getString(R.string.toast_message_none);
+        }
+
+        String toastMessage = String.format(toastMessageFormat, correctGuesses);
+        int duration = Toast.LENGTH_SHORT;
+
+        // Create toast
+        Toast toast = Toast.makeText(context, toastMessage, duration);
+
+        // Create ResultsModal
+        ResultsModal modal = new ResultsModal();
+
+        // Show the new view: Modal, Toast
+        modal.show(getFragmentManager(), "dialog");
+        toast.show();
+
+
+        // reset the score via resetQuiz()
+
         resetQuiz();
     }
 
