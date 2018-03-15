@@ -51,7 +51,7 @@
     <string name="q8_answer">All excluding g) Good sources of calcium include kale, pak choi, okra, spring greens, dried figs, chia seeds and almonds. Red peppers are a great source of vitamin C, but contain very little calcium.</string>
     <string name="enter_name_hint">Start by entering your first name</string>
     <string name="modal_guesses">0</string>
-    <string name="modal_out_of">out of 7</string>
+    <string name="modal_out_of">out of 8</string>
     <string name="modal_see_ans_button_text">See answers</string>
     <string name="modal_back_to_quiz">Back to quiz</string>
     <string name="toast_message_none">You didn\'t get any correct answers!</string>
