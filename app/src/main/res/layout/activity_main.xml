@@ -234,22 +234,18 @@
                         android:textSize="@dimen/questions_text_size"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:id="@+id/q3"
-                        style="@style/RadioGroupStyle">
-
-                        <RadioButton
-                            android:id="@+id/q3-a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/question_3_option_a" />
-
-                        <RadioButton
-                            android:id="@+id/q3-b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/question_3_option_b" />
-                    </RadioGroup>
+                    <EditText
+                        android:id="@+id/q3_enter_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:hint="@string/q3_enter_answer_hint"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:layout_marginLeft="@dimen/questions_text_margin"
+                        android:layout_marginRight="@dimen/questions_text_margin"
+                        android:layout_marginBottom="@dimen/questions_text_margin"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

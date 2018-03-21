@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,8 +109,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Boolean questionThreeCorrectChoice() {
-        final RadioButton correctAnswer = findViewById(R.id.q3_b);
-        return correctAnswer.isChecked();
+        EditText q3EditText = (EditText)findViewById(R.id.q3_enter_answer);
+        String enteredAnswer = (String) q3EditText.getText().toString();
+        String correctAnswer = (String) "No";
+        return correctAnswer.equals(enteredAnswer);
     }
 
     private Boolean questionFourCorrectChoice() {
@@ -147,12 +152,13 @@ public class MainActivity extends AppCompatActivity {
     public int  countCorrectGuesses() {
         if (questionOneCorrectChoice()) correctGuesses++;
         if (questionTwoCorrectChoice()) correctGuesses++;
-        if (questionThreeCorrectChoice()) correctGuesses++;
         if (questionFourCorrectChoice()) correctGuesses++;
         if (questionFiveCorrectChoice()) correctGuesses++;
         if (questionSixCorrectChoice()) correctGuesses++;
         if (questionSevenCorrectChoice()) correctGuesses++;
         if (questionEightCorrectChoices()) correctGuesses++;
+        if (questionThreeCorrectChoice()) correctGuesses++;
+        Log.i("question3", questionThreeCorrectChoice().toString());
 
         return correctGuesses;
     }
