@@ -3,8 +3,8 @@ package com.example.android.quizapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -17,23 +17,31 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Objects;
-
 public class MainActivity extends AppCompatActivity {
 
     // Stores the amount of correct guesses made by a user
     private int correctGuesses;
+
+    // Method for hiding the soft keyboard, mostly used on the leading EditText
+    public static void hideSoftKeyboard(Activity activity) {
+        if (activity == null) return;
+        if (activity.getCurrentFocus() == null) return;
+
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Targets the editTextView
-        EditText targetEditText = (EditText)findViewById(R.id.enter_name);
+        // Targets the editTextViews
+        EditText nameEditText = (EditText) findViewById(R.id.enter_name);
+        EditText q3Edit = (EditText) findViewById(R.id.q3_enter_answer);
 
-        // Sets an onClick Listener to the EditText
-        targetEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        // Sets an onClick Listener to the nameEditText
+        nameEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 switch (actionId) {
                     case EditorInfo.IME_ACTION_DONE:
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         v.clearFocus();
 
                         // Request focus from the parent view
-                        CardView leadingCard = (CardView)findViewById(R.id.leading_card);
+                        CardView leadingCard = (CardView) findViewById(R.id.leading_card);
                         leadingCard.requestFocus();
                         return true;
 
@@ -53,15 +61,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
-    // Method for hiding the soft keyboard, mostly used on the leading EditText
-    public static void hideSoftKeyboard(Activity activity) {
-        if (activity == null) return;
-        if (activity.getCurrentFocus() == null) return;
+        // Sets an onClick Listener to the q3EditText
+        q3Edit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                switch (actionId) {
+                    case EditorInfo.IME_ACTION_DONE:
+                        // Hide keyboard
+                        hideSoftKeyboard(MainActivity.this);
 
-        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+                        // Clear view focus
+                        v.clearFocus();
+
+                        // Request focus from the parent view
+                        CardView q3Card = (CardView) findViewById(R.id.q3_card);
+                        q3Card.requestFocus();
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
     public void submitAnswers(View view) {
@@ -109,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Boolean questionThreeCorrectChoice() {
-        EditText q3EditText = (EditText)findViewById(R.id.q3_enter_answer);
+        EditText q3EditText = (EditText) findViewById(R.id.q3_enter_answer);
         String enteredAnswer = (String) q3EditText.getText().toString();
         String correctAnswer = (String) "No";
         return correctAnswer.equals(enteredAnswer);
@@ -129,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
         final RadioButton correctAnswer = findViewById(R.id.q6_b);
         return correctAnswer.isChecked();
     }
+
     private Boolean questionSevenCorrectChoice() {
         final RadioButton correctAnswer = findViewById(R.id.q7_b);
         return correctAnswer.isChecked();
@@ -149,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 
-    public int  countCorrectGuesses() {
+    public int countCorrectGuesses() {
         if (questionOneCorrectChoice()) correctGuesses++;
         if (questionTwoCorrectChoice()) correctGuesses++;
         if (questionFourCorrectChoice()) correctGuesses++;
@@ -163,11 +185,11 @@ public class MainActivity extends AppCompatActivity {
         return correctGuesses;
     }
 
-    public void resetQuiz () {
+    public void resetQuiz() {
         correctGuesses = 0;
     }
 
-    public void onAnswersButtonClick (View answers) {
+    public void onAnswersButtonClick(View answers) {
         if (answers.getId() == R.id.answers) {
             Intent i = new Intent(MainActivity.this, Answers.class);
             startActivity(i);
