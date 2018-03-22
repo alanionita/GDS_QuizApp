@@ -131,9 +131,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Boolean questionThreeCorrectChoice() {
         EditText q3EditText = (EditText) findViewById(R.id.q3_enter_answer);
-        String enteredAnswer = (String) q3EditText.getText().toString();
+        String enteredAnswer = (String) q3EditText.getText().toString().trim();
         String correctAnswer = (String) "No";
-        return correctAnswer.equals(enteredAnswer);
+        return correctAnswer.equalsIgnoreCase(enteredAnswer);
     }
 
     private Boolean questionFourCorrectChoice() {
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox answerE = findViewById(R.id.q8_e);
         final CheckBox answerF = findViewById(R.id.q8_f);
         final CheckBox answerG = findViewById(R.id.q8_g);
-        if (answerA.isChecked() && answerB.isChecked() && answerC.isChecked() && answerD.isChecked() && answerE.isChecked() && answerF.isChecked()) {
+        if (answerA.isChecked() && answerB.isChecked() && answerC.isChecked() && answerD.isChecked() && answerE.isChecked() && answerF.isChecked() && !answerG.isChecked()) {
             result = true;
         }
         return result;

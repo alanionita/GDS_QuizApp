@@ -67,7 +67,6 @@ public class ResultsModal extends DialogFragment {
 
         TextView correctAnswers = resultsView.findViewById(R.id.guess);
         int correctGuesses = ((MainActivity)getActivity()).countCorrectGuesses();
-        Log.i("correct guesses", String.valueOf(correctGuesses));
         correctAnswers.setText(String.valueOf(correctGuesses));
         return resultsView;
     }
